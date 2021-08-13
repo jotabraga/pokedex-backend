@@ -4,9 +4,7 @@ import { clearDatabase, endConnection, startConnection } from "../utils/database
 import app from "../../src/app";
 
 beforeAll(startConnection);
-
 beforeEach(clearDatabase);
-
 afterAll(endConnection);
 
 describe("POST /sign-up", () => {

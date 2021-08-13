@@ -33,7 +33,6 @@ export async function createSession(userId: number) {
       userId,
       token: "pokemonpokemon"
   };
-
   return getRepository(Session).save(session);
 }
 
