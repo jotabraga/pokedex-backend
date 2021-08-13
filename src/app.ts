@@ -18,8 +18,8 @@ app.post("/sign-up", userController.signUp);
 app.post("/sign-in", userController.signIn);
 app.post("/populate-database", databaseController.populateDatabase);
 app.get("/pokemons", authMiddleware, pokemonController.getAllPokemons);
-app.post("/my-pokemons/:id/add", authMiddleware, pokemonController.addPokemon);
-app.post("/my-pokemons/:id/remove", authMiddleware, pokemonController.removePokemon);
+app.post("/my-pokemons/:pokemonId/add", authMiddleware, pokemonController.addPokemon);
+app.post("/my-pokemons/:pokemonId/remove", authMiddleware, pokemonController.removePokemon);
 
 export async function init () {
   await connectDatabase();
