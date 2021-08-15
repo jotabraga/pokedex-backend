@@ -3,7 +3,7 @@ import Pokemon from "../entities/Pokemon";
 import CaughtPokemon from "../entities/CaughtPokemon";
 
 export async function getPokemons() {
-  const allPokemons = getRepository(Pokemon).find({order: {number: "ASC"}});  
+  const allPokemons = await getRepository(Pokemon).find({order: {number: "ASC"}});  
   return allPokemons;
 }
 

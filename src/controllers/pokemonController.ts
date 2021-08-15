@@ -13,7 +13,7 @@ export async function addPokemon(req: Request, res: Response) {
   if (!pokemonId) return res.status(400);
   const stuckPokemon = await pokemonService.addPokemonToMyPokedex(parseInt(pokemonId), parseInt(userId));
   if (!stuckPokemon) return res.status(400);
-  return res.status(200);
+  return res.sendStatus(200);
 }
 
 export async function removePokemon(req: Request, res: Response) {
@@ -22,5 +22,5 @@ export async function removePokemon(req: Request, res: Response) {
   if (!pokemonId) return res.status(400);
   const freePokemon = await pokemonService.removePokemonFromMyPokedex(parseInt(pokemonId), parseInt(userId));
   if (!freePokemon) return res.status(400);
-  return res.status(200);
+  return res.sendStatus(200);
 }
