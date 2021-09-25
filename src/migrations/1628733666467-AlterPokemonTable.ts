@@ -22,5 +22,4 @@ export class AlterPokemonTable1628733666467 implements MigrationInterface {
         await queryRunner.query(`DROP TABLE "sessions"`);
         await queryRunner.query(`DROP TABLE "pokemons"`);
     }
-
 }
